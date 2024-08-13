@@ -1,7 +1,9 @@
 {
   "name": "housing-calculator-portable",
-  "version": "0.1.0",
-  "private": true,
+  "description": "A homeownership calculator built for use with the City of Asheville website (local government). Written in React, it assumes Bootstrap 4.6 CSS exists in the host site.",
+  "author": "Rick Barley",
+  "version": "1.4.0",
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

@@ -1,0 +1,206 @@
+// this default configuration matches how configuration items are assembled in the WordPress site
+const defaultConfiguration = {
+  formSetup: {
+    grossHouseholdIncome: {
+      min: 10000,
+      max: 150000,
+      default: 50000,
+      step: 500,
+      label: 'Gross Annual Household Income',
+      gt_translate_keys: ['label'],
+    },
+    householdSize: {
+      min: 1,
+      max: 8,
+      default: 2,
+      step: 1,
+      label: 'Household Size',
+      gt_translate_keys: ['label'],
+    },
+    purchasePrice: {
+      min: 50000,
+      max: 500000,
+      default: 250000,
+      step: 1000,
+      label: 'Home Price',
+      gt_translate_keys: ['label'],
+    },
+    downPayment: {
+      min: 0,
+      max: 100000,
+      default: 50000,
+      step: 500,
+      label: 'Down Payment Amount',
+      gt_translate_keys: ['label'],
+    },
+    mortgageRate: {
+      min: 0.03,
+      max: 0.09,
+      default: 0.05,
+      step: 0.0005,
+      label: 'Mortgage Rate',
+      gt_translate_keys: ['label'],
+    },
+    hoaFees: {
+      min: 0,
+      max: 500,
+      default: 0,
+      step: 5,
+      label: 'Include HOA Fees',
+      gt_translate_keys: ['label'],
+    },
+    payClosingWithDownPayment: {
+      label: 'Pay closing costs in cash along with down payment',
+      gt_translate_keys: ['label'],
+    },
+  },
+  grossMonthlyIncome: {
+    label: 'Gross Monthly Income',
+    narrativeText: 'Monthly income before taxes.',
+    gt_translate_keys: ['label', 'narrativeText'],
+  },
+  loanPayment: {
+    label: 'Principle and Interest (at',
+    narrativeText: 'Monthly payment of principal and interest.',
+    gt_translate_keys: ['label', 'narrativeText'],
+  },
+  totalyMonthlyCosts: {
+    label: 'Total Monthly Housing Costs',
+    narrativeText: 'The sum of all monthly expenses considered by this calculator.',
+    gt_translate_keys: ['label', 'narrativeText'],
+  },
+  homePrice: {
+    label: 'Home Price',
+    narrativeText: 'This is the home price you selected.',
+    gt_translate_keys: ['label', 'narrativeText'],
+  },
+  downPayment: {
+    label: 'Down Payment',
+    narrativeText:
+      'This is the down payment amount you selected. This down payment reduces the amount of money you need to borrow when you purchase a home. It is also important to know that a smaller down payment (e.g. one under 20%) may require you to purchase mortgage insurance.',
+    gt_translate_keys: ['label', 'narrativeText'],
+  },
+  closingCosts: {
+    label: 'Closing Costs',
+    percentageOfLoan: 0,
+    fixedAmount: 3700,
+    narrativeText:
+      'Closing costs are fees and expenses you pay when you close on your house, beyond the down payment. These costs can run 3 to 5 percent of the loan amount and may include title insurance, attorney and realtor fees, appraisals, taxes and more.',
+    gt_translate_keys: ['label', 'narrativeText'],
+  },
+  loanAmount: {
+    label: 'Loan Amount',
+    narrativeText:
+      'The total amount of money you will need to borrow, given home price, closing costs, down payment, etc.',
+    gt_translate_keys: ['label', 'narrativeText'],
+  },
+  cashUpFront: {
+    label: 'Cash Up Front',
+    narrativeText: 'The total amount of cash you will pay at the time of purchase.',
+    gt_translate_keys: ['label', 'narrativeText'],
+  },
+  mortgageRate: {
+    label: 'Mortgage Rate',
+    percentage: 0.035,
+    narrativeText:
+      "A mortgage is a loan to buy a home. When you borrow the money, you promise to repay the loan at an agreed-upon interest rate. That's the mortgage rate. It's an important factor to consider when you are trying to determine how much a loan will cost you. To borrow the money, the lender will charge you a fee, expressed as an interest rate assessed for the life of the loan. Each payment you make includes a combination of principal and interest.",
+    gt_translate_keys: ['label', 'narrativeText'],
+  },
+  loanPeriod: {
+    label: 'Loan Period',
+    lengthInYears: 30,
+    narrativeText:
+      'A mortgage is set up so you pay off the loan over a specified period called the term. The most common term is 30 years.',
+    gt_translate_keys: ['label', 'narrativeText'],
+  },
+  cityTax: {
+    label: 'City Property Tax',
+    rate: 0.00403,
+    narrativeText:
+      'Local governments levy property taxes on property owners within their locality. Governments use taxes to provide taxpayers with various services, including schools, police, fire and garbage collection. Property taxes are calculated by applying an assessment ratio to the property’s fair market value.',
+    gt_translate_keys: ['label', 'narrativeText'],
+  },
+  countyTax: {
+    label: 'County Property Tax',
+    rate: 0.00488,
+    narrativeText:
+      'Local governments levy property taxes on property owners within their locality. Governments use taxes to provide taxpayers with various services, including schools, police, fire and garbage collection. Property taxes are calculated by applying an assessment ratio to the property’s fair market value.',
+    gt_translate_keys: ['label', 'narrativeText'],
+  },
+  schoolTax: {
+    label: 'School Tax',
+    rate: 0.001062,
+    narrativeText:
+      'Local governments levy property taxes on property owners within their locality. Governments use taxes to provide taxpayers with various services, including schools, police, fire and garbage collection. Property taxes are calculated by applying an assessment ratio to the property’s fair market value.',
+    gt_translate_keys: ['label', 'narrativeText'],
+  },
+  homeownersInsurance: {
+    label: 'Homeowners Insurance',
+    percentageOfLoan: 0.005,
+    fixedAmount: 0,
+    narrativeText:
+      'Homeowners insurance provides financial relief if a covered event damages your home, property, or personal belongings. It can also pay out if you’re held responsible for an accident or injury. Homeowners insurance is required by most mortgage lenders.',
+    gt_translate_keys: ['label', 'narrativeText'],
+  },
+  mortgageInsurance: {
+    label: 'Mortgage Insurance',
+    percentageOfLoan: 0,
+    fixedAmount: 100,
+    narrativeText:
+      "Mortgage insurance is a type of insurance that protects the lender in case a borrower defaults on their home loan. Because private mortgage insurance (PMI) mitigates risk to the lender, it allows people with less-than-perfect credit scores or smaller down payments to purchase a home. PMI is an additional monthly expense you’ll need to consider if you're making a down payment of less than 20%.  PMI costs are determined by the type and term of the loan you choose, the loan's purpose, loan amount, the loan-to-value ratio (LTV), the borrower's credit score, debt-to-income ratio and number of borrowers.\\r\\n\\r\\n* For simplification we are using a figure of $100.00 for PMI when putting less than 20% down. \\r\\n",
+    gt_translate_keys: ['label', 'narrativeText'],
+  },
+  hoaFees: {
+    label: 'Homeowners Association Fees',
+    fixedAmount: 0,
+    narrativeText:
+      'An HOA fee, also known as a homeowners association fee, is an expense that owners from a specific residential property or district must pay. This money is typically paid monthly by homeowners living within the HOA community to help maintain all properties, amenities, and common areas within the association.',
+    gt_translate_keys: ['label', 'narrativeText'],
+  },
+  amiReference: 'https://www.townofdavidson.org/',
+  amiByFamilySize: {
+    1: 52625,
+    2: 64250,
+    3: 72313,
+    4: 80313,
+    5: 86750,
+    6: 93188,
+    7: 99625,
+    8: 106063,
+  },
+  tableText: {
+    monthlyHeading: 'Monthly Summary',
+    overviewHeading: 'Financial Overview',
+    tableItem: 'Item',
+    tableValue: 'Value',
+    years: 'Years',
+    gt_translate_keys: ['monthlyHeading', 'overviewHeading', 'tableItem', 'TableValue', 'years'],
+  },
+  headlineText: {
+    heading: 'Estimated Monthly Payment',
+    attention: 'Attention!',
+    under: 'Under',
+    over: 'Over',
+    thatIs: 'That is',
+    ofGrossMonthlyIncome: 'of gross monthly income',
+    inAVL: 'In the Asheville area, a household of',
+    peopleWithIncomeOf: 'people with a gross annual income of',
+    isInThe: 'is in the',
+    amiBand: 'Area Median Income (AMI) Band',
+    learnMoreAMI: 'Learn More About AMI',
+    gt_translate_keys: [
+      'heading',
+      'under',
+      'over',
+      'thatIs',
+      'ofGrossMonthlyIncome',
+      'inAVL',
+      'peopleWithIncomeOf',
+      'isInThe',
+      'amiBand',
+      'learnMoreAMI',
+    ],
+  },
+};
+
+export default defaultConfiguration;
