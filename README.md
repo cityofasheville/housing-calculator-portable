@@ -4,7 +4,7 @@ This project was initially developed for use with the City of Asheville website.
 
 ## Setup and configuration
 
-To use this calculator in a standalone way, you can copy the public folder to any web accessible location and open index.html. If you need to modify the values used by the calculator, you can modify those values in the `src/defaultConfig.js` file.
+To use this calculator in a standalone way, you can copy the public folder to any web accessible location and open the `index.html` file. If you need to modify the values used by the calculator, you can modify those values in the `public/defaultConfig.json` file.
 
 ## Prerequisites
 
