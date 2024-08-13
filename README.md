@@ -4,19 +4,19 @@ This project was initially developed for use with the City of Asheville website.
 
 ## Setup and configuration
 
-To use this calculator in a standalone way, you can copy the public folder to any web accessible location and open index.html. If you need to modify the values used by the calculator, you can modify those values in the default config file.
+To use this calculator in a standalone way, you can copy the public folder to any web accessible location and open index.html. If you need to modify the values used by the calculator, you can modify those values in the `src/defaultConfig.js` file.
 
 ## Prerequisites
 
-Note that this application assumes the presence of certain third-party resources. You can examine what those resources are in the index at HTML file located in the public folder. Namely, this application expects bootstrap (v 4.6), popper, and jQuery, as well as React. A Font Awesome kit is also included to allow the use of icons (e.g. the info tooltip trigger).
+Note that this application assumes the presence of certain third-party resources. You can examine what those resources are in the HTML file located at `public/index.html`. Namely, this application expects bootstrap (v 4.6), popper, and jQuery, as well as React. A Font Awesome kit is also included to allow the use of icons (e.g. the info tooltip trigger).
 
 ## Modifying the application
 
-If you need to modify this application (i.e. edit its source), you will need to first install the required dependencies and rebuild the output from your modified source.
+If you need to modify this application (i.e. edit its source), you will first need to install the required dependencies and rebuild the output from your modified source.
 
 ### Install dependencies
 
-You will first need to have Node.js installed. Within the project directory (at the same level as the package.json file), run the following command:
+You will need to have Node.js installed before proceeding. Within the project directory (at the same level as the package.json file), run the following command:
 
 `npm install`
 
