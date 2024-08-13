@@ -5,8 +5,6 @@ import FeedbackOverview from './components/FeedbackOverview';
 import FeedbackDetails from './components/FeedbackDetails';
 import defaultConfiguration from './defaultConfig';
 
-// const { Component, render } = wp.element;
-
 class HousingCalculator extends React.Component {
   constructor(props) {
     super(props);
@@ -85,8 +83,6 @@ class HousingCalculator extends React.Component {
     }
     let preppedInput = textInput.replace(/[^0-9.]+/g, '');
 
-    // console.log('PREP:', preppedInput, validationType);
-
     if (validationType === 'float') {
       return parseFloat(preppedInput);
     } else {
@@ -96,7 +92,6 @@ class HousingCalculator extends React.Component {
 
   handleTableToggle(e) {
     e.preventDefault();
-    // console.log(e.target.dataset);
     const oldTableViewDetails = this.state.tableViewDetails;
     const incomingViewDetails = e.target.dataset.viewdetails === 'true';
 
@@ -118,8 +113,6 @@ class HousingCalculator extends React.Component {
       newVal = this.prepNumber(e.target.value, validationType);
     }
 
-    // console.log('BLUR', e.target.name, e.target.value, newVal, validationType);
-
     this.setState({
       formSubmitted: false,
       tableUpdateNeeded: true,
@@ -132,7 +125,6 @@ class HousingCalculator extends React.Component {
 
   handleChange(e) {
     let oldFormData = this.state.formData;
-    // let computedFormData = this.state.formData;
     let newVal;
 
     if (e.target.type === 'checkbox') {
@@ -142,8 +134,6 @@ class HousingCalculator extends React.Component {
     } else {
       newVal = this.prepNumber(e.target.value, 'int');
     }
-
-    // console.log(`CHANGE: ${e.target.name} ${e.target.value} ${newVal}`);
 
     this.setState({
       formSubmitted: false,
@@ -349,9 +339,6 @@ class HousingCalculator extends React.Component {
   };
 
   render() {
-    // console.log('State in render is...');
-    // console.log(this.state);
-
     // dim the results pane when values change
     // let tableStyle = { opacity: 0.33 };
     let btnOverviewClass = 'btn-secondary';
@@ -453,16 +440,5 @@ HousingCalculator.defaultProps = {
   // any similar icon package should work, by passing their styles with this tooltipIconStyles prop
   tooltipIconStyles: 'far fa-question-circle',
 };
-
-// the variable homeownershipCalculatorData is defined in the PHP page template and shipped to the frontend via wp_add_inline_script()
-// template: /avl/template-parts/slug-specific/homeownership-calculator.php
-
-// ReactDOM.render(
-//   <HousingCalculator
-//     seedConstants={defaultConfiguration}
-//     tooltipIconStyles="icon icon-info-circle"
-//   />,
-//   document.getElementById('homeownershipCalculatorApp')
-// );
 
 export default HousingCalculator;

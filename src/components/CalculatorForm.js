@@ -8,7 +8,6 @@ function CalculatorForm(props) {
   let hoaStyle = {};
   let percentDown = ((props.formData.downPayment / props.formData.purchasePrice) * 100).toFixed(1);
   let mortgageRate = (props.formData.mortgageRate * 100).toFixed(2);
-  // let percentDown = Math.round(percentDownRaw);
   let downPaymentStyle = 'text-success';
 
   if (percentDown < 20) {
