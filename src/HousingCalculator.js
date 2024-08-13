@@ -3,7 +3,6 @@ import CalculatorForm from './components/CalculatorForm';
 import FeedbackHeadline from './components/FeedbackHeadline';
 import FeedbackOverview from './components/FeedbackOverview';
 import FeedbackDetails from './components/FeedbackDetails';
-import defaultConfiguration from './defaultConfig';
 
 class HousingCalculator extends React.Component {
   constructor(props) {
@@ -40,7 +39,7 @@ class HousingCalculator extends React.Component {
     this.validateHouseholdSize = this.validateHouseholdSize.bind(this);
     this.validateHoa = this.validateHoa.bind(this);
 
-    console.log('Const', props.seedConstants);
+    console.log('Reading configuration...', props.seedConstants);
   }
 
   /**
@@ -431,14 +430,5 @@ class HousingCalculator extends React.Component {
     );
   }
 }
-
-HousingCalculator.defaultProps = {
-  // package comes with default values (defaultConfiguration) to make the calculator work
-  // these can be overridden by an object with the same structure in whatever page includes this calculator
-  seedConstants: defaultConfiguration,
-  // the defult icon styles assume font-awesome
-  // any similar icon package should work, by passing their styles with this tooltipIconStyles prop
-  tooltipIconStyles: 'far fa-question-circle',
-};
 
 export default HousingCalculator;
